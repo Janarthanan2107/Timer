@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@600;700&display=swap');
+
+:root {
+    /* colors are changeable always more combinations are in "https://coolors.co/" */
+
+    --clr-Grayish-blue: hsl(237, 18%, 59%);
+    --clr-Soft-red: hsl(345, 95%, 68%);
+    --clr-White: hsl(0, 0%, 100%);
+    --clr-Dark-desaturated-blue: hsl(236, 21%, 26%);
+    --clr-Very-dark-blue: hsl(235, 16%, 14%);
+    --clr-Very-dark-mostly-black-blue: hsl(234, 17%, 12%);
+    --clr-Transparent-Soft-violet: hsla(0, 0%, 0%, 0.5);
+
+    /* animation and some effects */
+    --transition: all 0.3s linear;
+    --spacing: 0.1rem;
+    --radius: 0.25rem;
+    --light-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    /* font-fam*/
+    --body-font-family: 'Red Hat Text', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+body {
+    font-family: var(--body-font-family);
+    text-decoration: var(--text-dec);
+    background-color: var(--Light-Grayish-Blue);
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--clr-Very-dark-mostly-black-blue);
+    position: relative;
+}
+
+.stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hills {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.timer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 5rem;
+    margin-top: -9rem;
+}
+
+.announcement {
+    font-weight: 700;
+    color: var(--clr-White);
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.timer {
+    display: flex;
+    position: relative;
+    z-index: 2;
+    gap: 2rem;
+}
+
+.days,
+.hours,
+.minutes,
+.seconds {
+    position: relative;
+    background-color: var(--clr-Dark-desaturated-blue);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.days h1 {
+    position: absolute;
+    top: -22.5%;
+    font-size: 4rem;
+    left: 14%;
+    color: var(--clr-Soft-red);
+    opacity: 0.8;
+}
+
+.hours h1 {
+    position: absolute;
+    top: -21.5%;
+    font-size: 4rem;
+    left: 14%;
+    color: var(--clr-Soft-red);
+    opacity: 0.8;
+}
+
+.minutes h1 {
+    position: absolute;
+    top: -21.5%;
+    font-size: 4rem;
+    left: 14%;
+    color: var(--clr-Soft-red);
+    opacity: 0.8;
+}
+
+.seconds h1 {
+    position: absolute;
+    top: -21.5%;
+    font-size: 4rem;
+    left: 14%;
+    color: var(--clr-Soft-red);
+    opacity: 0.8;
+}
+
+.first-half {
+    z-index: 2;
+    background-color: var(--clr-Very-dark-blue);
+    opacity: 0.45;
+    height: 3.5rem;
+    width: 6.75rem;
+    border-radius: 10px 10px 0 0;
+}
+
+.dot-container {
+    display: flex;
+    overflow: hidden;
+    justify-content: space-between;
+    gap: 6rem;
+    align-items: center;
+    margin-top: -5.5px;
+    margin-left: -4.90px;
+    position: absolute;
+}
+
+.dot {
+    position: relative;
+    display: flex;
+    border-radius: 50%;
+    width: 0.7rem;
+    height: 0.7rem;
+    background: var(--clr-Very-dark-blue);
+}
+
+.second-half {
+    z-index: 2;
+    background-color: var(--clr-Dark-desaturated-blue);
+    height: 3.5rem;
+    width: 6.75rem;
+    border-radius: 0px 0px 10px 10px;
+}
+
+.timer-info {
+    color: var(--clr-Grayish-blue);
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.7rem;
+    letter-spacing: 0.2rem;
+}
+
+.social-media-container {
+    position: absolute;
+    bottom: 10%;
+    display: flex;
+    gap: 2rem;
+}
+
+.social-icons {
+    width: 1rem;
+    height: 1rem;
+}
